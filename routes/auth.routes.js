@@ -47,7 +47,7 @@ router.post(
 router.post(
     '/login',
     [
-        check('email', 'Wrong email').normalizeEmail().isEmail(),
+        check('email', 'Wrong email').isEmail(),
         check('password', 'Password must be at least 6 symbols').isLength({ min: 6 })
     ],
     async (req, res) => {
